@@ -19,7 +19,7 @@ VP_ODOMETER.init = function(){
     scriptref.parentNode.insertBefore( fileref, scriptref );
   }
 
-  loadCSS( "http://github.hubspot.com/odometer/themes/odometer-theme-train-station.css" );
+  loadCSS( "https://github.hubspot.com/odometer/themes/odometer-theme-train-station.css" );
 
   inlineCSS( `
     .odometer-container{ text-align: center; }
