@@ -9,7 +9,24 @@ VP_ODOMETER.init = function(){
     document.getElementsByTagName("head")[0].appendChild( fileref );
   }
 
+  function inlineCSS( html ){
+    var fileref = document.createElement( 'style' );
+    fileref.innerHTML = html;
+
+    var scriptref = document.querySelector('script');
+
+    // Insert our new styles before the first script tag
+    scriptref.parentNode.insertBefore( fileref, scriptref );
+  }
+
   loadCSS( "http://github.hubspot.com/odometer/themes/odometer-theme-train-station.css" );
+
+  inlineCSS( `
+    .odometer-container{ text-align: center; }
+    .odometer-list{ list-style: none; padding: 0; }
+    .odometer-list li{ display: inline-block; }
+    .odometer { font-size: 20px; margin-top: 5px;}
+  ` );
 
   VP_ODOMETER.initialCount();
 }
