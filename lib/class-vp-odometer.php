@@ -16,7 +16,6 @@
            </ul>
 	      </div>
         <script src="http://github.hubspot.com/odometer/odometer.js"></script>
-        <!--script src="https://raw.githubusercontent.com/samvthom16/vp_odometer/main/main.js"></script-->
         <script type='text/javascript' src='<?php echo plugins_url( 'main.js' , dirname(__FILE__) );?>'></script>
         <?php
         return ob_get_clean();
